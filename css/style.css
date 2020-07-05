@@ -36,7 +36,7 @@ li, a, button{
 }
 
 header{
-    background-image: url(/images/capa.jpg); 
+    background-image: url(images/capa.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,7 +121,7 @@ header button{
 
 /*  PRODUTOS  */
 section.produtos{
-    background-image: url(/images/fundo.png);
+    background-image: url(images/fundo.png);
     /* background-color: green; */
     background-position: center;
     background-repeat: no-repeat;
@@ -348,7 +348,7 @@ section.sobre-nos{
 }
 
 .ooverlay2{
-    background-image: url(/images/acai-historia.jpg);
+    background-image: url(images/acai-historia.jpg);
     position: absolute;
     z-index: 100;
     width: 46%;
