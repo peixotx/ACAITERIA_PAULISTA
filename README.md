@@ -3,6 +3,10 @@ O Açaí Paulista é uma proposta de website para portfólio. Seu processo de cr
 
 https://peixotx.github.io/ACAITERIA_PAULISTA
 
+
+https://youtu.be/7RNWjhrNlgg
+
+
 _________________________________________
 :computer: Tecnologias Utilizadas:
 * HTML
