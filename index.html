@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <title>Açaí Paulista</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<section class="contatar-wpp">
+    <div class="wpp">
+        <a href="https://whats.link/ajpeixoto"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="clear"></div>
+</section>
+
+<body>
+    <header id="header">
+        <img class="logo" src="./images/logo.png">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#sobre">QUEM SOMOS</a></li>
+                <li><a href="#produtos">PRODUTOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <a class="nossas-lojas" href="#"><button>NOSSAS LOJAS</button></a>
+
+        <div class="b2">
+            <a href="#"><button><i class="fas fa-arrow-alt-circle-down"></i>CONHEÇA NOSSOS PRODUTOS</button></a>
+        </div>
+        <div class="clear"></div>
+    </header>
+    
+
+    <section class="produtos" id="produtos">
+        <div class="overlay"></div>
+
+        <div class="container">
+            <h1>Produtos</h1>
+        </div>     
+
+        <div id="slider">
+            <div id="box">
+                <img src="./images/p1.png">
+            </div>
+
+            <!-- buttons for controls slider -->
+            <button id="prew" onclick="prewImage()" i class="far fa-angle-left"></i> </button>
+            <button id="next" onclick="nextImage()" i class="far fa-angle-right"></i></i> </button>
+        </div><!--slider-->
+
+
+        <script type="text/javascript">
+            var slider_content = document.getElementById('box');
+
+            // contain images in an array
+            var image = ['./images/p1', './images/pb', './images/pf', './images/pm'];
+
+            var i = image.length;
+
+            //function for next slide
+
+            function nextImage(){
+                if (i<image.length){
+                    i = i+1;
+                } else{
+                    i=1;
+                }
+                slider_content.innerHTML = "<img src="+image[i-1]+".png>";
+            }
+
+            function prewImage(){
+                if (i<image.length+1 && i>1){
+                    i = i-1;
+                } else{
+                    i=image.length;
+                }
+                slider_content.innerHTML = "<img src="+image[i-1]+".png>";
+            }
+        </script>
+
+
+        <!-- QUADRO CINZA -->
+
+        <div class="quadro"></div>
+        <div class="nome">
+            <h1>AÇAÍ PAULISTA DE POTE</h1>
+            <p>0% gorduras trans e glúten</p>
+            <h2>R$ 19,99</h2>
+            <div class="clear"></div>
+        </div>
+
+        <!-- BOTAO DE QTD PEDIDOS     -->
+
+        <div data-app="product.quantity" class="qtd_pedidos">
+            <div id="btn-prew">
+                <input type="button" id="plus" value='+' onclick="process (+1)"></input>
+            </div>
+            <div id="btn-next">
+                <input type="button" id="minus" value='-' onclick="process (-1)"></input>
+            </div>
+            <div id="number">
+                <input id="quant" name="quant" class="text" size="1" type="text" value="1" maxlength="5" readonly/>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <script>   //BOTAO DE QUANTIDADE
+
+            function process(quant){
+                var value = parseInt(document.getElementById("quant").value);
+                value+=quant;
+                if(value < 1){
+                document.getElementById("quant").value = 1;
+                }else{
+                document.getElementById("quant").value = value;
+                }
+            }
+         </script>
+    
+        <div class="comprar">
+            <button type="submit">COMPRAR</button>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <section class="sobre-nos" id="sobre">
+        <div class="ooverlay2"></div>
+        <div class="overlay2"></div>
+        
+        <div class="sobre">
+            <h1>Quem Somos</h1>
+            <p>Somos o Açaí Paulista, uma rede de açaiterias fundada em 2006 com o objetivo de levar o sabor do açaí natural a todo o Brasil. Atualmente temos 13 lojas espalhadas em 5 estados do Brasil: Sergipe, Rio de Janeiro, São Paulo, Espírito Santo e Minas Gerais. </p>
+            <h2>Procure a loja mais próxima de você!</h2>
+
+            <div class="estados-franquia">
+                <select name="estado">
+                    <option selected="" value="">Selecione o Estado (UF)</option>
+                    <option value="Espírito Santo">Espírito Santo</option>
+                    <option value="Minas Gerais">Minas Gerais</option>
+                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Sergipe">Sergipe</option>
+                    </select>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </section>
+
+
+    <section class="lucro">
+
+        <img src="./images/mapa-do-brasil-vetor.png">
+
+        <div class="counter">
+            <div class="counter-item">
+                <div class="counter-number">
+                    <small>+</small>28<small>k</small>
+                </div>
+                <div class="counter-label">
+                    Clientes por mês
+                </div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-number">
+                    152<small>kg</small>
+                </div>
+                <div class="counter-label">
+                    de açaí por hora
+                </div>
+            </div>
+            
+            <div class="counter-item">
+                <div class="counter-number">
+                    17
+                </div>
+                <div class="counter-label">
+                    Lojas em 5 estados
+                </div>
+            </div>
+        </div><!--counter-->
+
+        <div class="endereco" id="contato">
+            <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Rio%20de%20Janeiro+(Nosso%20Endere%C3%A7o)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='http://maps-generator.com/pt'>www.maps-generator.com</a> 
+            
+            <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4e215b791add11722e3783f6534a78ed908ef631'></script>
+            
+            <aside>
+                <div class="telefone">
+                    <i class="fas fa-phone-volume"></i>
+                    <p>Matriz</p>
+                    <h1>Av. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+                    <h2>Segunda à Segunda 13:00 às 22:00.</h2>
+                </div>
+                <div class="clear"></div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <img src="./images/logo.png">
+
+        <div class="junte-se">
+            <p>Junte-se a nós!</p>
+            <div class="rede-social">
+                <div class="face">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a> 
+                </div>
+                <div class="insta">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright <i class="far fa-copyright"></i> 2020 - Todos os direitos reservados</p>
+            <a href="https://whats.link/ajpeixoto">Criado por AJ Peixoto</a>
+        </div>
+
+        <div class="clear"></div>
+    </footer>
+</body>
+</html>
