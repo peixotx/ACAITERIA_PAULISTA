@@ -5,31 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <title>Açaí Paulista</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/public/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
-<section class="contatar-wpp">
-    <div class="wpp">
-        <a href="https://whats.link/ajpeixoto"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="clear"></div>
-</section>
+
 
 <body>
     <header id="header">
-        <img class="logo" src="./images/logo.png">
 
         <nav>
+            <img class="logo" src="/public/assets/logo.png">
             <ul class="menu">
                 <li><a href="#header">HOME</a></li>
                 <li><a href="#sobre">QUEM SOMOS</a></li>
                 <li><a href="#produtos">PRODUTOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
+            <a class="nossas-lojas" href="#"><button>NOSSAS LOJAS</button></a>
         </nav>
-
-        <a class="nossas-lojas" href="#"><button>NOSSAS LOJAS</button></a>
 
         <div class="b2">
             <a href="#"><button><i class="fas fa-arrow-alt-circle-down"></i>CONHEÇA NOSSOS PRODUTOS</button></a>
@@ -47,44 +41,13 @@
 
         <div id="slider">
             <div id="box">
-                <img src="./images/p1.png">
+                <img src="/public/assets/p1.png">
             </div>
 
             <!-- buttons for controls slider -->
             <button id="prew" onclick="prewImage()" i class="far fa-angle-left"></i> </button>
             <button id="next" onclick="nextImage()" i class="far fa-angle-right"></i></i> </button>
         </div><!--slider-->
-
-
-        <script type="text/javascript">
-            var slider_content = document.getElementById('box');
-
-            // contain images in an array
-            var image = ['./images/p1', './images/pb', './images/pf', './images/pm'];
-
-            var i = image.length;
-
-            //function for next slide
-
-            function nextImage(){
-                if (i<image.length){
-                    i = i+1;
-                } else{
-                    i=1;
-                }
-                slider_content.innerHTML = "<img src="+image[i-1]+".png>";
-            }
-
-            function prewImage(){
-                if (i<image.length+1 && i>1){
-                    i = i-1;
-                } else{
-                    i=image.length;
-                }
-                slider_content.innerHTML = "<img src="+image[i-1]+".png>";
-            }
-        </script>
-
 
         <!-- QUADRO CINZA -->
 
@@ -136,7 +99,10 @@
         
         <div class="sobre">
             <h1>Quem Somos</h1>
-            <p>Somos o Açaí Paulista, uma rede de açaiterias fundada em 2006 com o objetivo de levar o sabor do açaí natural a todo o Brasil. Atualmente temos 13 lojas espalhadas em 5 estados do Brasil: Sergipe, Rio de Janeiro, São Paulo, Espírito Santo e Minas Gerais. </p>
+            <p>
+                Somos o Açaí Paulista, uma rede de açaiterias fundada em 2006 com o objetivo de levar o sabor do açaí natural a todo o Brasil.
+                <br> Atualmente temos 13 lojas espalhadas em 5 estados do Brasil: Sergipe, Rio de Janeiro, São Paulo, Espírito Santo e Minas Gerais.
+            </p>
             <h2>Procure a loja mais próxima de você!</h2>
 
             <div class="estados-franquia">
@@ -156,7 +122,7 @@
 
     <section class="lucro">
 
-        <img src="./images/mapa-do-brasil-vetor.png">
+        <img src="/public/assets/mapa-do-brasil-vetor.png">
 
         <div class="counter">
             <div class="counter-item">
@@ -205,7 +171,7 @@
     </section>
 
     <footer>
-        <img src="./images/logo.png">
+        <img src="/public/assets/logo.png">
 
         <div class="junte-se">
             <p>Junte-se a nós!</p>
@@ -227,5 +193,14 @@
 
         <div class="clear"></div>
     </footer>
+
+    <section class="contatar-wpp">
+        <div class="wpp">
+            <a href="https://whats.link/ajpeixoto"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="clear"></div>
+    </section>
+    
+    <script src="/public/scripts/index.js"></script>
 </body>
 </html>

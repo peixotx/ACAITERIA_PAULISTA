@@ -8,12 +8,16 @@
 .clear{clear: both;}
 
 .contatar-wpp{
-    margin: 80vh 5% 0 88%;
-    float: right;
     position: fixed;
     z-index: 20;
+    bottom: 80px;
+    right: 100px;
 }
 .contatar-wpp a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     font-weight: lighter;
     cursor: pointer;
     color: white;
@@ -23,10 +27,22 @@
     outline: none;
     border-radius: 50% 50%;
     box-shadow: 5px 5px 10px rgba(0, 11, 41, 0.74);
-    padding: 15px; 
+    padding: 10px 12px;
+    transition: all 800ms ease;
+    
+}
+.contatar-wpp a:hover{
+    transform: translateY(-5px);
 }
 
-li, a, button{
+nav{
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 10%;
+}
+
+li, li a, button{
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
     font-size: 15px;
@@ -36,7 +52,7 @@ li, a, button{
 }
 
 header{
-    background-image: url(../images/capa.jpg); 
+    background-image: url(/public/assets/capa.jpg); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,15 +66,15 @@ header{
 
 .logo{
     cursor: pointer;
-    width: 10%;
+    width: 15%;
     left: 0;
-    margin: -78vh 0 0 7%;
 }
 
 .menu{
     list-style: none;
-    padding-left: 120px; 
-    margin: -42vh 0 0 0%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .menu li{
@@ -72,7 +88,6 @@ header{
 
 .nossas-lojas{
     padding-left: 80px;
-    margin-top: -70vh; 
 }
 
 header i{
@@ -90,7 +105,9 @@ header button{
     border: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    display: block;
+    outline: none;
+    position: relative;
+    left: 400px;
 }
     button:hover{
         background-color: #e98a15ce;
@@ -98,7 +115,6 @@ header button{
 .b2 button{
     align-items: center;
     padding: 15px;
-    margin: 35vh -55%;
     color: white;
     background-color: #E98A15;
     border-radius: 50px;
@@ -108,6 +124,9 @@ header button{
     display: flex;
     position: absolute;
     outline: none;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
 }
     .b2 button:hover{
         background-color: #ff8c00d8;
@@ -122,7 +141,7 @@ header button{
 
 /*  PRODUTOS  */
 section.produtos{
-    background-image: url(../images/fundo.png);
+    background-image: url(/public/assets/fundo.png);
     /* background-color: green; */
     background-position: center;
     background-repeat: no-repeat;
@@ -192,7 +211,7 @@ section.produtos > .container{
     border: none;
     font-size: 30px;
     font-weight: bolder;
-    color: rgba(0, 0, 0, 0.788);
+    color: rgba(206, 206, 206, 0.788);
     position: absolute;
     top: 90%;
     z-index: 8;
@@ -202,6 +221,7 @@ section.produtos > .container{
         border-radius: 0 10px 10px 0;
         margin-left: 130%;
         cursor: pointer;
+
     }
     #prew{
         border-radius: 0 10px 10px 0; 
@@ -349,7 +369,7 @@ section.sobre-nos{
 }
 
 .ooverlay2{
-    background-image: url(../images/acai-historia.jpg);
+    background-image: url(/public/assets/acai-historia.jpg);
     position: absolute;
     z-index: 100;
     width: 46%;
@@ -398,12 +418,8 @@ section.sobre-nos > .sobre{
         font-style: normal;
         font-size: 20px;
         line-height: 42px;
-        display: flex;
-        align-items: center;
-        text-align: justify;
         letter-spacing: -0.025em;
         padding: 31% 10% 0 60%;
-        float: right;
         display: flex;
         color: rgb(255, 115, 0);
     }
